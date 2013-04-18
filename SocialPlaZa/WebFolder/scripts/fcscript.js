@@ -1,0 +1,1 @@
+﻿var fcBrainObj;    fcBrainObj = function () {    	//fc el Código:};            //set it as global    var fcBrain = new fcBrainObj();
