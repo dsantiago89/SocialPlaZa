@@ -1,0 +1,1 @@
+﻿var fcBrainObjSrv;    fcBrainObSRV = function () {    	//fc el Código:};            //set it as global    var fcBrainSrv = new fcBrainObjSrv();
