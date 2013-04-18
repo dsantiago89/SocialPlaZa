@@ -1,1 +1,1 @@
-﻿
+﻿var appBrainObj;    appBrainObj = function () {    	//fc el Código:};            //set it as global    var appBrain = new appBrainObj();
