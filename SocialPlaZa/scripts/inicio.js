@@ -1,1 +1,0 @@
-﻿var appBrainObjSrv;    appBrainObjSrv = function () {    	//fc el Código:};            //set it as global    var appBrainSrv = new appBrainObjSrv();
