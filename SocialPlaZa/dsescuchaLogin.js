@@ -1,1 +1,1 @@
-﻿//hola//Adios//Que tal//Pues bien
+﻿//hola//Adios
