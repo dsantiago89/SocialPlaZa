@@ -13,6 +13,8 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
+	var richText2 = {};	// @richText
+	var richText3 = {};	// @richText
 	var textField7 = {};	// @textField
 	var textField6 = {};	// @textField
 	var textField5 = {};	// @textField
@@ -23,6 +25,46 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
+
+	richText2.click = function richText2_click (event)// @startlock
+	{// @endlock
+		
+		cambiarOnFocus("textField1", "richText4", "Nombre",id);
+        cambiarOnFocus("textField2", "richText7", "Primer Apellido",id);
+        cambiarOnFocus("textField3", "richText8", "Segundo Apellido",id);
+        cambiarOnFocus("textField4", "richText9", "Correo Electrónico",id);
+        cambiarOnFocus("textField5", "richText10", "Password",id);
+        cambiarOnFocus("textField6", "richText11", "Confirma Password",id);
+        cambiarOnFocus("textField7","richText12","Nombre Empresa",id);
+        if (comprobarFormulario(id)) {
+			
+			var nom=$$(getHtmlId('textField1')).getValue();
+			var ape1=$$(getHtmlId('textField2')).getValue();
+		    var ape2=$$(getHtmlId('textField3')).getValue();
+		    var acceso=$$(getHtmlId('textField4')).getValue();
+		    var pass=$$(getHtmlId('textField5')).getValue();
+		    var emp=$$(getHtmlId('textField7')).getValue();
+		 
+            ds.Usuarios.insertaUsuario(acceso, pass);
+            ds.Entidades.insertaEntidad(nom, ape1, ape2);
+            ds.Entidades.insertaEntidad(emp, "", "");
+            ds.Empresas.insertaEmpresa(emp);
+
+            alert("Guardado con exito");
+           	fcBrain.welcome();
+           
+        }
+        else {
+            alert("Revisa los campos del formularios");
+
+        }
+		
+	};// @lock
+
+	richText3.click = function richText3_click (event)// @startlock
+	{// @endlock
+		fcBrain.welcome();
+	};// @lock
 
 	textField7.focus = function textField7_focus (event)// @startlock
 	{// @endlock
@@ -62,6 +104,8 @@ function constructor (id) {
 	};// @lock
 
 	// @region eventManager// @startlock
+	WAF.addListener(this.id + "_richText2", "click", richText2.click, "WAF");
+	WAF.addListener(this.id + "_richText3", "click", richText3.click, "WAF");
 	WAF.addListener(this.id + "_textField7", "focus", textField7.focus, "WAF");
 	WAF.addListener(this.id + "_textField6", "focus", textField6.focus, "WAF");
 	WAF.addListener(this.id + "_textField5", "focus", textField5.focus, "WAF");
