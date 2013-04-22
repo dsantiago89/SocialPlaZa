@@ -21,7 +21,7 @@ function constructor (id) {
 
 	// eventHandlers// @lock
 
-
+	
 	textField1.focus = function textField1_focus (event)// @startlock
 	{// @endlock
 		cambiarOnFocus("textField1","richText5","Email",id);

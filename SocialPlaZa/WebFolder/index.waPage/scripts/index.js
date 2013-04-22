@@ -22,6 +22,8 @@ $('#richText4').hide();
 		fcBrain.welcome();
 		
 	}
+	
+
 
 	richText2.click = function richText2_click (event)// @startlock
 	{// @endlock
