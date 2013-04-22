@@ -1,1 +1,0 @@
-﻿directory.setLoginListener("ptoLogin");//pues aquí
