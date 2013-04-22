@@ -59,20 +59,7 @@ function constructor (id) {
 		$("#"+id+"_textField2")[0].type = "password";
 	};// @lock
 	
-	function cambiarOnFocus(id1,id2,valorDefecto,comp){
-		var id='#';
-		if(comp){
-			 id= '#'+comp+'_';
-	    }
-		id1=id+id1;
-		id2=id+id2;
-		
-		if ($(id1).val() == valorDefecto) {
-			$(id1).val("");
-			$(id1).css("color","black");
-			$(id2).fadeIn('slow');
-		}
-	}
+	
 	
 	// @region eventManager// @startlock
 	WAF.addListener(this.id + "_textField1", "focus", textField1.focus, "WAF");
